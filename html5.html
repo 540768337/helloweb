@@ -26,7 +26,7 @@
         <li>C</li>
         <li>D</li>
     </ol>
-    <!--无序列表-->
+    <!--无序列表可引用css样式，disc(实体圆）circle（空心圆）square（方块实体）-->
     <ul>
         <li>A</li>
         <li>B</li>
@@ -39,12 +39,15 @@
     <table border="用数字来给表格加边框">
         <!--tr为行，td为列-->
         <tr>
-            <td></td>
-            <td></td>
+            <td>12</td>
+            <td>34</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td>56</td>
+            <td>78</td>
+
+
+
     </table>
 
     用div+css做表格
@@ -60,5 +63,41 @@
 
     <!--行级元素inline；span；a在一行
         块级元素block；div p h1-h6 ul ol li自己在一行-->
+
+    <!--form表单,label为输入框类似用户名密码，input这里为输入框-->
+    <input action="后台提交到的网站">
+        <label for="指向id的名字"></label>
+        <input type="text" id="指向id的名字">
+        <!--可不指出id-->
+
+        <label for=""></label>
+        <br>
+
+    <!--radio为单选框默认为空心圆，checkbox为复选框默认为空心方块，都在type里声明
+        单选框中需声明name为名字相同如下-->
+        单选框
+    <br>
+    <input type="radio" name="名字相同的标签里单选">单选1<br>
+    <input type="radio" name="名字相同的标签里单选">单选2<br>
+    <input type="radio" name="名字相同的标签里单选">单选3<br>
+
+    <br>
+
+    <!--select为创建下拉列表，option为下拉列表里的选项标签-->
+    <select>
+        <option>下拉列表选项1</option>
+        <option>下拉列表选项2</option>
+        <option>下拉列表选项3</option>
+    </select>
+
+
+    <!--submit显示为提交按钮，reset显示为嵌套按钮-->
+    <input type="submit">
+    <input type="reset">
+    <!--p标签中不能嵌套块元素-->
+    <!--一些字符会被误认为是标签，这时需要用转译字符将其显示，例如空格大于小于号等-->
+    <div>哈哈哈&nbsp;&nbsp;&nbsp;哈哈哈</div>
+
+    </form>
     </body>
 </html>

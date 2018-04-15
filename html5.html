@@ -62,9 +62,19 @@
     <!--p标签为段落标签下一段，有16px的上下边距边距而div没有-->
     <p></p>
 
-    <!--行级元素inline；span；a在一行
-        块级元素block；div p h1-h6 ul ol li自己在一行-->
+    <!--行级元素inline；span；a在一行，不能设置宽高
+        块级元素block；div p h1-h6 ul ol li自己在一行，可以设置宽高，在不设置宽高时，宽是充满父元素的，高是由内容决定-->
 
+    **  <!--display：inline；块级->行级
+        display：block；行级->块级
+        display: none; 不显示该元素，位置也没有
+        display：inline-block；有兼容性，既有行元素特点在一行，又有块级元素的特点可设置宽高
+        中间的空隙由回车产生的如 <span></span>
+                            <span></span>
+
+
+
+    -->
     <!--form表单,label为获取焦点，input这里为输入框-->
     <input action="后台提交到的网站">
         <label for="指向id的名字"></label>

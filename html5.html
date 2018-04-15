@@ -17,8 +17,9 @@
     <body>
     <h1>这是一个heading1标签,字体最大</h1>
     <h6>这是一个最小标签</h6>
-    <a href="跳转网页的地址" target="跳转后新开一个网页展示">跳转到某个网页</a>
+    <a href="跳转网页的地址" target(目标)="_blank"(跳转后新开一个网页展示）>跳转到某个网页</a>
 
+    <!--插入标签时例如a，div，ul，ol等在li中插入，标签结束加/-->
     <!--有序列表-->
     <ol>
         <li>A</li>
@@ -37,10 +38,10 @@
 
     <!--表格-->
     <table border="用数字来给表格加边框">
-        <!--tr为行，td为列-->
+        <!--tr为行，td为列,rowsspan:""跨行，用于合并单元格且只能从上向下跨，colspan:""跨列-->
         <tr>
             <td>12</td>
-            <td>34</td>
+            <td rowspan="2">34</td>
         </tr>
         <tr>
             <td>56</td>
@@ -58,13 +59,13 @@
     <span></span>
     <span></span>
 
-    <!--p标签为段落标签下一段，有16px的边距-->
+    <!--p标签为段落标签下一段，有16px的上下边距边距而div没有-->
     <p></p>
 
     <!--行级元素inline；span；a在一行
         块级元素block；div p h1-h6 ul ol li自己在一行-->
 
-    <!--form表单,label为输入框类似用户名密码，input这里为输入框-->
+    <!--form表单,label为获取焦点，input这里为输入框-->
     <input action="后台提交到的网站">
         <label for="指向id的名字"></label>
         <input type="text" id="指向id的名字">
@@ -84,17 +85,17 @@
     <br>
 
     <!--select为创建下拉列表，option为下拉列表里的选项标签-->
-    <select>
-        <option>下拉列表选项1</option>
-        <option>下拉列表选项2</option>
-        <option>下拉列表选项3</option>
+    <select name="city" id="">
+        <option value="提交到后台的值">下拉列表选项1</option>
+        <option value="提交到后台的值">下拉列表选项2</option>
+        <option value="提交到后台的值">下拉列表选项3</option>
     </select>
 
 
     <!--submit显示为提交按钮，reset显示为嵌套按钮-->
     <input type="submit">
     <input type="reset">
-    <!--p标签中不能嵌套块元素-->
+    <!--p标签中不能嵌套块元素例如div-->
     <!--一些字符会被误认为是标签，这时需要用转译字符将其显示，例如空格大于小于号等-->
     <div>哈哈哈&nbsp;&nbsp;&nbsp;哈哈哈</div>
 

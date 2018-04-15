@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--外部样式link rel="stylesheet" href=""在head下-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--css注释为/*...*/-->
+    <!--内联样式（不推荐使用）-->
+    <div style="width: 200px;height:200px;background:red">div</div>
+    <p style="width: 200px;height: 200px;background: #ffb04e">div</p>
+
+    <!--内部样式-->
+    <style>
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #62ccff;}
+
+        div{
+            color: coral;
+        }
+
+        .style
+
+    </style>
+
+    <div id="div2">内部样式</div>
+     **<!--css选择器
+        1.id选择器 #id{}，id为唯一的不可重复
+        2.标签/元素选择器 div{}（会选中所有该标签）
+        3.class选择器（可重复）.class{}
+        4.分组选择器 #div1,#div2{}
+      * 5.后代选择器(子孙后代都选中) #div2 div{}
+      * 6.子代选择器 #div2>div{}(有兼容性问题）
+      * 7.多类选择器 #div.aa.bb{}(全选)
+
+        全重值(可叠加)
+        id:100(效率高)
+        class:10
+        tag:1
+
+        !important>内联>ID>class>tag
+        对于权重值一样的情况下相同属性的后面定义的覆盖前面定义的，不同属性叠加
+
+
+
+        -->
+    <!--div{div$4}*4-->
+    <div class="style1">div14</div>
+    <div class="style2">div24</div>
+    <div>div34</div>
+    <div>div44</div>
+
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+
+    <!--div.a>div.b-->
+    <div class="a">
+        <div class="b"></div>
+    </div>
+
+
+
+</body>
+</html>
+<!--基本单位像素:px-->

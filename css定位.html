@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #div1{
+            background: #fbd5ff;
+            width: 100px;
+            height:100px;
+        }
+        #div2{
+            background: #22ff88;
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        #div3{
+            background: #ffe732;
+            width:100px;
+            height: 100px;
+        }
+        #div6{
+            position: fixed;
+        }
+        #div7{
+            height: 50px;
+            background: #23b08a;;
+            margin-top:100px;
+            position: sticky;
+            top:0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+
+    <div6 id="div6">回到顶部</div6>
+
+    <div7 id="div7"></div7>
+</body>
+</html>
+<!--mdn文档很全
+    caniuse网站查看大部分兼容性的问题
+position
+默认值static
+relative相对定位：相对于自己的初始位置，不会脱离文档流，
+absolute绝对定位：相对于离他最近的文档流已经定位的祖先元素，脱离文档流
+fixed固定定位：相对于窗口定位，脱离文档流，有兼容性问题
+sticky粘性定位：类似于淘宝主页的搜索框，兼容性问题很多，是相对定位与固定定位的混合，元素在跨越特定-->
+
+
+<!--BFC:块级格式化上下文，可以看做是隔离了的独立容器
+    opacity透明度（0~1）
+    filter：alpha旧式透明度
+    overflow：hidden溢出隐藏，还可触发bfc
+    只要元素满足下面任意条件即可触发bfc特性：
+
+    body根元素
+    浮动元素：float除none以外的值
+    绝对定位元素：position（absolute、fixed）
+    display为inline-block、table-cells、flex
+    overflow除了visible以外的值（hidden、auto、scroll）
+
+
+    居中父元素相对定位，子元素绝对定位
+    （css3）transform：translate（-50%，-50%）；位移自己宽度的一半，位移自己高度的一半。相当于相对定位
+    当宽高不同或不知宽高时-->

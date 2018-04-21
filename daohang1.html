@@ -9,42 +9,60 @@
         a{
             text-decoration: none;
             width: 100px;
-            height: 40px;
-            display: inline-block;
+            line-height:40px;
         }
-        li{
+        li1{
             list-style: none;
             float: left;
             width: 100px;
-            height: 40px;
             background: #cbad9a;
             text-align: center;
             margin-right: 10px;
             line-height: 40px;
+        }
+        li{
+            list-style: none;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            margin-right: 10px;
 
         }
-        #nav a:hover{
+        .nav li1:hover ul2{
 
             background: #22ff88;
             width: 100px;
-            height: 120px;
+            height:80px;
+            display: block;
         }
-        #nav a{
+        .nav a{
             color: darkgoldenrod;
         }
-        #nav{
-            width: 1300px;
+        .nav{
+            width: 500px;
 
         }
         ul{
             width: 440px;
+        }
+        ul2{
+            list-style: none;
+            float: left;
+            width: 100px;
+            background: #cbad9a;
+            text-align: center;
+            display: none;
+        }
+        #s{
+            height: 40px;
 
         }
-        .menu a:hover{
-
+        .nav li1:hover{
             background: #22ff88;
-
         }
+
+
+
 
 
 
@@ -53,22 +71,23 @@
 </head>
 
 <body>
-        <ul id="nav">
-            <li>
+        <ul class="nav">
+            <li1 id="s">
                 <a href="">游戏</a>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-            </li>
-            <li>
+                    <ul2 class="op">
+                        <li>QQ炫舞</li>
+                        <li>冒险岛2</li>
+                    </ul2>
+            </li1>
+            <li1>
                 <a href="">音乐</a>
-            </li>
-            <li>
+            </li1>
+            <li1>
                 <a href="">新闻</a>
-            </li>
-            <li>
+            </li1>
+            <li1>
                 <a href="">娱乐</a>
-            </li>
+            </li1>
 
         </ul>
 

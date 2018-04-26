@@ -1,0 +1,215 @@
+
+body{
+
+
+    margin: 0;
+    padding: 0;
+
+
+}
+img{
+    border: 0;
+}
+li{
+
+    list-style: none;
+    /*padding: 0 14px;*/
+
+}
+a{
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+.upright{
+    text-align: center;
+}
+#upleft{
+    width: 1250px;
+    line-height: 32px;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+#title{
+
+    height: 32px;
+    font-size: 12px;
+    color: #999;
+    background: #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+.tmall{
+    float: left;
+    color: #bbb;
+
+}
+#downleft{
+    float:left;
+    width:100%;
+    height: 130px;
+    padding-left: 0px;
+    margin-top: 0px;
+
+}
+/*input{*/
+    /*width: 491px;*/
+    /*height: 36px;*/
+    /*margin-left: 62px;*/
+    /**/
+
+/*}*/
+.menu{
+    width: 90px;
+
+}
+.upright{
+    float: right;
+
+}
+.aa{
+
+    cursor: pointer;
+    float: left;
+    padding: 0 14px;
+
+
+}
+.bb{
+    position: relative;
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: transparent;
+    padding-bottom: 1px;
+
+}
+.cc{
+
+    height: 32px;
+}
+#title .aa:hover {
+    color: red;
+    text-decoration: underline;
+
+
+
+}
+.upright .triangle::after{
+    content: ' ';
+    width: 0;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #bbb transparent transparent transparent;
+    position: absolute;
+    right: 6px;
+    top: 16px;
+    transform-origin: 3px 1.5px;
+    transition: none;
+}
+.upright .triangle{
+    position: relative;
+}
+.upright .aa:hover::after{
+    transform: rotate(180deg);
+    transition: transform .3s ease;
+}
+
+.upright .submenu {
+    width: 100px;
+    position: absolute;
+    left: -1px;
+    bottom: -65px;
+    border: 1px solid #eee;
+    border-top-width: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 0px 0px;
+    display: none;
+
+
+
+}
+.upright .shoucang{
+    width: 90px;
+    position: absolute;
+    left: -1px;
+    bottom: -65px;
+    border: 1px solid #eee;
+    border-top-width: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 0px 0px;
+    ;
+    display: none;
+}
+
+.upright .aa:hover .submenu{
+    display: block;
+}
+.upright .aa:hover .shoucang{
+    display: block;
+}
+
+.aa .submenu:hover > a{
+    color: red;
+}
+.aa:hover > a{
+    color: #f00;
+}
+
+
+.upright .bb:hover{
+    background: #ffffff;
+    border-color: transparent #f2f2f2 ;
+
+}
+
+
+.upright .aa a:hover{
+    text-decoration: underline;
+    color: #f00;}
+
+.upright .shangjia {
+    width: 124px;
+    position: absolute;
+    left: -49px;
+    bottom: -162px;
+    border: 1px solid #eee;
+    border-top-width: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 0px 0px;
+    display: none;
+}
+
+.shangjia a:hover{
+    text-decoration: underline;
+    color: #f00;
+}
+.shangjia{
+    line-height: 23px;
+    text-align: left;
+    position: relative;
+
+
+}
+
+.left{
+    padding-left: 2px;
+    padding-right: 10px;
+}
+.right{
+    padding-right: 2px;
+    padding-left: 10px;
+}
+.aa .shangjia span{
+    color: black;
+    cursor: auto;
+}
+.upright .aa:hover .shangjia{
+    display: block;
+}
+
+

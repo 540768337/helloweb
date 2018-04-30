@@ -89,7 +89,7 @@ a{
 
     height: 32px;
 }
-#title .aa:hover {
+#title .dd:hover {
     color: red;
     text-decoration: underline;
 
@@ -167,7 +167,7 @@ a{
 }
 
 
-.upright .aa a:hover{
+.upright .dd a:hover{
     text-decoration: underline;
     color: #f00;}
 
@@ -184,10 +184,7 @@ a{
     display: none;
 }
 
-.shangjia a:hover{
-    text-decoration: underline;
-    color: #f00;
-}
+
 .shangjia{
     line-height: 23px;
     text-align: left;
@@ -211,5 +208,116 @@ a{
 .upright .aa:hover .shangjia{
     display: block;
 }
+.wangzhan{
+    width: 1234px;
+    position: absolute;
+    left: -1159px;
+    bottom: -161px;
+    border: 1px solid #eee;
+    border-top-width: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 0px 0px;
+    /*display: none;*/
+    height: 160px;
+    text-align: left;
 
 
+
+
+}
+.wangzhan a {
+    color: black;
+}
+.fuwu{
+
+    float: right;
+    margin-right: 40px;
+    width: 210px;
+
+}
+.text-one{
+     cursor: auto;
+     color: black;
+     padding-left: 30px;
+     font-size: 15px;
+     padding-top: 15px;
+ }
+.left-title{
+
+    padding-right: 30px;
+    padding-left: 30px;
+
+
+}
+.right-title{
+    padding-left: 20px;
+
+}
+.upright .ee:hover >a{
+    color: #bbbbbb;
+}
+.wangzhan a:hover {
+    text-decoration: underline;
+}
+.bb .title:hover{
+    color: #bbbbbb;
+
+
+}
+
+.hangye{
+    float: right;
+    width: 420px;
+
+
+}
+.text-two{
+    cursor: auto;
+    color: #2263d4;
+    padding-left: 30px;
+    font-size: 15px;
+    padding-top: 15px;
+}
+.hangye .hangye-one{
+    padding-left: 30px;
+}
+.hangye .hangye-two{
+    padding-left: 55px;
+}
+
+
+.hangye a:hover {
+    text-decoration: underline;
+    color: #2263d4;
+}
+
+
+.redian{
+    float: right;
+
+
+}
+.text-three{
+    cursor: auto;
+    color: #f56a00;
+
+    font-size: 15px;
+    padding-top: 15px;
+}
+.redian-one{
+    margin-right: 40px;
+}
+.redian-two{
+    margin-right: 40px;
+}
+.redian-three{
+    margin-right: 52px;
+}
+.redian-four{
+    margin-right: 28px;
+}
+.redian a:hover {
+    text-decoration: underline;
+    color: #f56a00;
+}

@@ -111,10 +111,12 @@ button{
     height: 36px;
     position: absolute;
     left: 8px;
-    top: 2px;
+    top: 1px;
     z-index: 1;
     cursor: auto;
+
 }
+
 
 .form{
 

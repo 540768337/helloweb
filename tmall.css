@@ -54,13 +54,14 @@ a{
     margin-top: 0px;
 
 }
-/*input{*/
-    /*width: 491px;*/
-    /*height: 36px;*/
-    /*margin-left: 62px;*/
-    /**/
+input{
+    width: 491px;
+    height: 36px;
+    margin-left: 62px;
+    margin-bottom: 50px;
 
-/*}*/
+
+}
 .menu{
     width: 90px;
 
@@ -323,4 +324,15 @@ a{
 }
 .upright .aa:hover .wangzhan{
     display: block;
+}
+.shuxian{
+    position: absolute;
+    color: #f2f2f2;
+    border-style:solid;
+    height: 112px;
+    margin-top: 16px;
+    border-right-width: 1px;
+    border-left-width: 0px;
+
+
 }

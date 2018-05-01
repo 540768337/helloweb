@@ -47,21 +47,92 @@ a{
 
 }
 #downleft{
-    float:left;
-    width:100%;
+
+
     height: 130px;
     padding-left: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
 
 }
 input{
-    width: 491px;
-    height: 36px;
-    margin-left: 62px;
-    margin-bottom: 50px;
+    width: 483px;
+    height: 26px;
+    position: relative;
+    border: none;
+    padding: 5px 3px 5px 5px;
+    outline: none;
+    /*去掉输入框选中时的蓝色边框*/
+
+
+
 
 
 }
+button{
+    width: 132px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    background: #ff0036;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    border: 0px;
+    top: 0px;
+    right: 0px;
+}
+
+
+
+
+.input{
+    height: 106px;
+}
+.form{
+    width: 621px;
+    height: 36px;
+    position: absolute;
+    left: 350px;
+    top: 74px;
+    border-style: solid;
+    border-color: #ff0036;
+    border-width: 2px;
+    padding-left: 0px;
+
+
+
+
+}
+#downleft label{
+
+    color: #666;
+    font-size: 14px;
+    line-height: 36px;
+    height: 36px;
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    z-index: 1;
+    cursor: auto;
+}
+
+.form{
+
+}
+.img{
+
+}
+#downleft img{
+    position: relative;
+}
+
+
+
+
+
 .menu{
     width: 90px;
 

@@ -46,7 +46,7 @@ a{
     color: #bbb;
 
 }
-#downleft{
+.downleft{
 
 
     height: 130px;
@@ -103,17 +103,19 @@ button{
     border-width: 2px;
     padding-left: 0px;
 }
-#downleft label{
+.downleft label{
 
     color: #666;
     font-size: 14px;
     line-height: 36px;
-    height: 36px;
+    height: 30px;
     position: absolute;
     left: 8px;
     top: 1px;
     z-index: 1;
     cursor: auto;
+    visibility: visible;
+
 
 }
 
@@ -122,7 +124,7 @@ button{
 
 }
 
-#downleft img{
+.downleft img{
     position: relative;
 }
 .input-down{

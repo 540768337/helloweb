@@ -136,10 +136,20 @@ button{
 .input-down li{
     display: inline-block;
     font-size: 15px;
-    padding-right: 18px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-right: #f2f2f2;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+}
+.input-down .none{
+    border-style: none;
 }
 .input-down .red a{
     color: red;
+}
+.input-down a{
+
 }
 
 
@@ -261,9 +271,9 @@ button{
     color: #f00;}
 
 .upright .shangjia {
-    width: 124px;
+    width: 141px;
     position: absolute;
-    left: -49px;
+    left: -66px;
     bottom: -162px;
     border: 1px solid #eee;
     border-top-width: 0px;
@@ -280,19 +290,21 @@ button{
     position: relative;
 
 
+
 }
 
 .left{
-    padding-left: 2px;
+    padding-left: 10px;
     padding-right: 10px;
 }
 .right{
-    padding-right: 2px;
+    padding-right: 10px;
     padding-left: 10px;
 }
 .aa .shangjia span{
     color: black;
     cursor: auto;
+    padding-left: 10px;
 }
 .upright .aa:hover .shangjia{
     display: block;

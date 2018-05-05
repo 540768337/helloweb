@@ -99,3 +99,16 @@ transform（css3）：rotate（-30deg）旋转
 -origin旋转原点：100px 0
 transition（css3）过渡：监听的属性 过度时间 过度效果；当监听属性发生改变时在过渡时间里过渡到什么效果，属性过多用all
 -->
+
+一行显示不下的字后有省略号
+white-space:nowrap
+overflow:hidden
+text-overflow:ellipsis
+
+
+多行文字显示不下最后有省略号
+display:-webkit-box;兼容性问题
+-webkit-box-orient:vertical
+-webkit-line-clamp：3
+overflow：hidden
+text-overflow：ellipsis

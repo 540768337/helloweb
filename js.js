@@ -42,3 +42,9 @@ function () {
 push：往数组的末尾插入
 unshift：往数组前面投东西
 把数组转化成字符串
+break跳出循环
+    continue结束本次循环，开始下一次循环
+
+调试一般加断点
+严格模式下不支持使用arguments.callee
+递归函数自己套自己

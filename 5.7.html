@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var x=window.prompt("请输入第几项");
+    function n() {
+
+        var a1=1,a2=1,temp;
+        for(var i=3;i<=x;i++){
+            temp=a1+a2;
+            a2=a1;
+            a1=temp;
+
+        }
+        alert(a1);
+    }
+    n(x);
+
+
+</script>
+</body>
+</html>

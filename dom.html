@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右键菜单</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #menu{
+            border: 1px solid black;
+            width: 120px;
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+
+
+        #menu li{
+            list-style: none;
+            width: 120px;
+            height: 30px;
+            border-bottom: 3px dashed #ccc;
+            text-align: center;
+            line-height: 30px;
+        }
+        #menu li:hover{
+            background: #dde6d6;
+            cursor: pointer;
+        }
+        #menu .last{
+            border-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>菜单1</li>
+        <li>菜单2</li>
+        <li>菜单3</li>
+        <li>菜单4</li>
+        <li class="last">菜单5</li>
+    </ul>
+
+
+    <script>
+        var oMenu=document.getElementById('menu');
+        var aLi=oMenu.getElementsByTagName('li');//获取标签
+        document.oncontextmenu=function (e) {//事件处理函数
+            e=e || window.event;//解决兼容性
+            oMenu.style.display='block';//只能赋值
+            oMenu.style.left=e.clientX+'px';
+            oMenu.style.top=e.clientY+'px';
+
+            return false;//阻止默认行为（浏览器默认菜单）
+        }
+        document.onclick=function () {//绑定事件
+            oMenu.style.display='none';
+        }
+
+        for (var i=0; i<aLi.length; i++){
+            aLi[i].onclick=function () {
+                console.log(this);//this对于当前对象的引用
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!--事件
+三要素：事件源 事件处理函数 事件对象e（在function里）
+-->

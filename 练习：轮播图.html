@@ -102,7 +102,7 @@
                 <li class="first change usb">
                     <div class="left"></div>
                 </li>
-                <li class="first">
+                <li class="first asb">
                     <div class="right"></div>
                 </li>
 
@@ -115,6 +115,8 @@
         var ali=onum.getElementsByTagName('li');
         var obutton=document.getElementById('button');
         var aleft=obutton.getElementsByClassName('usb');
+        var aright=obutton.getElementsByClassName('asb');
+        var osum=document.getElementById('sum');
         var now=0;
         for (var i=0;i<ali.length;i++) {
             ali[i].xx = i;
@@ -125,19 +127,49 @@
                 }
                 this.className = 'change';
                 aimg[this.xx].className = 'change';
-                now=this.xx;
+                now = this.xx;
             }
         }
 
-            aleft.onclick=function () {
-                now++;
-                for(i=0;i<ali.length;i++){
-//                    aleft[i].className='';
-                    aimg[i].className='';
+            aleft.onclick =aright.onclick= function () {
+                if (this===aleft){
+                    now--;
+                    if(now==-1){
+                        now=ali.length-1;
+                    }
                 }
-
-                aleft[now].className='change';
+                else {
+                    now++;
+                    if (now==ali.length){
+                        now=0;
+                    }
+                    changeimg();
+                }
+                for (i = 0; i < ali.length; i++) {
+                    ali[i].className='';
+                    aimg[i].className = '';
+                }
+                this.className='change';
+                aimg[now].className = 'change';
+                ali[now].className='change';
             }
+            osum.onmouseover=function () {
+                timer=setInterval(timer);
+            }
+            osum.onmouseout=function () {
+                timer=setInterval(function () {
+                    aright.onclick();
+                },1000);
+                
+            }
+            var timer=setInterval(function () {
+                aright.onclick();
+            },1000);
+        function changeimg() {
+            function () {
+                
+            }
+        }
 
 
 

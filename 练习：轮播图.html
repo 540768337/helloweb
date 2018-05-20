@@ -118,6 +118,7 @@
         var aright=obutton.getElementsByClassName('asb');
         var osum=document.getElementById('sum');
         var now=0;
+        var timer;
         for (var i=0;i<ali.length;i++) {
             ali[i].xx = i;
             ali[i].onmouseover = function () {
@@ -128,47 +129,49 @@
                 this.className = 'change';
                 aimg[this.xx].className = 'change';
                 now = this.xx;
+                changeimg();
             }
-        }
+        };
 
-            aleft.onclick =aright.onclick= function () {
-                if (this===aleft){
+            aleft[0].onclick =aright[0].onclick= function () {
+                if (this === aleft[0]) {
                     now--;
-                    if(now==-1){
-                        now=ali.length-1;
+                    if (now == -1) {
+                        now = ali.length - 1;
                     }
                 }
                 else {
                     now++;
-                    if (now==ali.length){
-                        now=0;
+                    if (now == ali.length) {
+                        now = 0;
                     }
-                    changeimg();
+//
                 }
-                for (i = 0; i < ali.length; i++) {
-                    ali[i].className='';
-                    aimg[i].className = '';
+                changeimg();
+            };
+                function changeimg() {
+                    for (i = 0; i < ali.length; i++) {
+                        ali[i].className='';
+                        aimg[i].className = '';
+                    }
+                    aimg[now].className = 'change';
+                    ali[now].className='change';
+
                 }
-                this.className='change';
-                aimg[now].className = 'change';
-                ali[now].className='change';
-            }
+
             osum.onmouseover=function () {
-                timer=setInterval(timer);
+                clearInterval(timer);
             }
             osum.onmouseout=function () {
-                timer=setInterval(function () {
-                    aright.onclick();
-                },1000);
-                
-            }
-            var timer=setInterval(function () {
-                aright.onclick();
-            },1000);
-        function changeimg() {
-            function () {
-                
-            }
+                play();
+
+            };
+                play();
+        function play() {
+            timer = setInterval(function () {
+                aright[0].onclick();
+            }, 1000);
+
         }
 
 

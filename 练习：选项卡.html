@@ -16,6 +16,10 @@
             color:#6c7d7e;
             background: #8c8a84;
         }
+        #first .ss{
+            background: #4a50c5;
+            color: #020206;
+        }
         #first li{
             width: 100px;
             line-height:32px;
@@ -23,11 +27,9 @@
             float: left;
             background: #62ccff;
             margin-right: 10px;
-        }
-        #first li:hover{
-            background-color: #af9aff;
             cursor: pointer;
         }
+
 
 
         #second{
@@ -41,6 +43,9 @@
             position: absolute;
             display: none;
         }
+        #second .ss{
+            display: block;
+        }
 
     </style>
 </head>
@@ -49,13 +54,13 @@
 
     <ul id="first">
         <li class="ss">选项1</li>
-        <li class="ss">选项2</li>
-        <li class="ss">选项3</li>
+        <li >选项2</li>
+        <li >选项3</li>
     </ul>
     <ul id="second">
-        <li class="zz">111</li>
-        <li class="zz">222</li>
-        <li class="zz">333</li>
+        <li class="ss">111</li>
+        <li >222</li>
+        <li >333</li>
 
 
     </ul>
@@ -69,15 +74,20 @@
 //    var ozz=document.getElementsByClassName('zz');
     var aLi=oSecond.getElementsByTagName('li');
     var ali=oFirst.getElementsByTagName('li');
-    for (var i=0;i<aLi.length;i++) {
+    for (var i=0;i<ali.length;i++) {
         ali[i].xx=i;//给每个li对象自定义属性，保存住循环的时候i的值，不要起与本身属性名字冲突的
         //相当于
         //ali[0].xx=0;
         //ali[1].xx=1;
         ali[i].onclick = function () {
+            for (var i=0;i<ali.length;i++){
+                ali[i].className='';
+                aLi[i].className='';
+            }
+                this.className='ss';
 
-                this.style.display = 'block';
-                this.style.backgroundColor = 'black';
+
+                aLi[this.xx].className='ss';
 
 //                this.className='ss';//取到class的属性,(推荐)
 

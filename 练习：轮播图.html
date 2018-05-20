@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        #sum{
+            width: 520px;
+            height: 280px;
+            margin: 140px auto;
+            position: relative;
+        }
+
+        #pic{
+
+            width: 520px;
+            height: 280px;
+        }
+        #pic img{
+            position: absolute;
+            display: none;
+        }
+        #pic .change{
+            display: block;
+        }
+        #num{
+            position: absolute;
+            right:-10px;
+            bottom: 0px;
+
+        }
+        #num li{
+            width: 20px;
+            height: 20px;
+            background: #8c8a84;
+            text-align: center;
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        #num .change{
+            background: #ffb04e;
+            color: #6c7d7e;
+        }
+        .left{
+            border-width: 5px;
+            border-style: solid;
+            border-top-color: transparent;
+            border-right-color: #ffffff;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            width: 0;
+
+        }
+        .right{
+            border-width: 5px;
+            border-style: solid;
+            border-top-color: transparent;
+            border-left-color: #ffffff;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            width: 0;
+            float: right;
+        }
+        #button .first{
+            float: left;
+            width: 15px;
+            height: 10px;
+            background-color: #af9aff;
+            margin-right: 5px;
+        }
+        #button{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="sum">
+        <div id="pic">
+            <img src="img/1.jpg" class="change" height="280" width="520"/>
+            <img src="img/2.jpg" height="280" width="520"/>
+            <img src="img/3.jpg" height="280" width="520"/>
+            <img src="img/4.jpg" height="280" width="520"/>
+        </div>
+        <ul id="num">
+            <li class="change">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul id="button">
+
+                <li class="first change usb">
+                    <div class="left"></div>
+                </li>
+                <li class="first">
+                    <div class="right"></div>
+                </li>
+
+        </ul>
+    </div>
+    <script>
+        var opic=document.getElementById('pic');
+        var aimg=opic.getElementsByTagName('img');
+        var onum=document.getElementById('num');
+        var ali=onum.getElementsByTagName('li');
+        var obutton=document.getElementById('button');
+        var aleft=obutton.getElementsByClassName('usb');
+        var now=0;
+        for (var i=0;i<ali.length;i++) {
+            ali[i].xx = i;
+            ali[i].onmouseover = function () {
+                for (var i = 0; i < ali.length; i++) {
+                    ali[i].className = '';
+                    aimg[i].className = '';
+                }
+                this.className = 'change';
+                aimg[this.xx].className = 'change';
+                now=this.xx;
+            }
+        }
+
+            aleft.onclick=function () {
+                now++;
+                for(i=0;i<ali.length;i++){
+//                    aleft[i].className='';
+                    aimg[i].className='';
+                }
+
+                aleft[now].className='change';
+            }
+
+
+
+
+
+    </script>
+</body>
+</html>

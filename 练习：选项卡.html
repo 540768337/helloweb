@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        #first{
+            width: 400px;
+            height: 32px;
+            border: 1px solid #ffb04e;
+            color:#6c7d7e;
+            background: #8c8a84;
+        }
+        #first li{
+            width: 100px;
+            line-height:32px;
+            text-align: center;
+            float: left;
+            background: #62ccff;
+            margin-right: 10px;
+        }
+        #first li:hover{
+            background-color: #af9aff;
+            cursor: pointer;
+        }
+
+
+        #second{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ffb04e;
+            border-top: none;
+            background: #8c8a84;
+        }
+        #second li{
+            position: absolute;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="third">
+
+    <ul id="first">
+        <li class="ss">选项1</li>
+        <li class="ss">选项2</li>
+        <li class="ss">选项3</li>
+    </ul>
+    <ul id="second">
+        <li class="zz">111</li>
+        <li class="zz">222</li>
+        <li class="zz">333</li>
+
+
+    </ul>
+</ul>
+
+
+<script>
+    var oSecond=document.getElementById('second');
+    var oFirst=document.getElementById('first');
+//    var oss=document.getElementsByClassName('ss');
+//    var ozz=document.getElementsByClassName('zz');
+    var aLi=oSecond.getElementsByTagName('li');
+    var ali=oFirst.getElementsByTagName('li');
+    for (var i=0;i<aLi.length;i++) {
+        ali[i].xx=i;//给每个li对象自定义属性，保存住循环的时候i的值，不要起与本身属性名字冲突的
+        //相当于
+        //ali[0].xx=0;
+        //ali[1].xx=1;
+        ali[i].onclick = function () {
+
+                this.style.display = 'block';
+                this.style.backgroundColor = 'black';
+
+//                this.className='ss';//取到class的属性,(推荐)
+
+            }
+
+    }
+
+//    document.getElementById('first').onclick=function () {
+//        x;
+//    }
+//    function x() {
+//        document.getElementById('second').innerHTML='this';
+//    }
+//
+//
+
+</script>
+</body>
+</html>

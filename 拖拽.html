@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #aa{
+            width: 200px;
+            height: 200px;
+            background: #22ff88;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="aa"></div>
+
+
+    <script>
+        var oaa=document.getElementById('aa');
+        oaa.onmousedown=function (e) {
+            var disx=e.clientX-oaa.offsetLeft;
+            var disy=e.clientY-oaa.offsetTop;
+            document.onmousemove=function(e){
+                var x=e.clientX;
+                var y=e.clientY;
+                oaa.style.left=x-disx+'px';
+                oaa.style.top=y-disy+'px';
+                
+                
+            }
+            oaa.onmouseup=function () {
+                document.onmousemove=null;
+                
+            }
+        }
+
+
+    </script>
+</body>
+</html>

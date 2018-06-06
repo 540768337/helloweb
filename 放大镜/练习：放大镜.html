@@ -3,8 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: 0;
+        }
+        #small{
+            width: 400px;
+            height: 400px;
+            float: left;
+
+        }
+        #big{
+            width: 400px;
+            height: 400px;
+            float: left;
+            overflow:hidden;
+            display: none;
+            position: relative;
+        }
+        #drag{
+            width: 200px;
+            height: 200px;
+            background: #fbd5ff;
+            opacity: .5;
+            cursor: pointer;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+        #big-img{
+            top: 0px;
+            left: 0px;
+            position: absolute;
+        }
+
+    </style>
 </head>
 <body>
+    <div id="small">
+        <img src="1.jpg" height="400" width="400"/>
+        <div id="drag"></div>
+    </div>
+    <div id="big">
+        <img id="big-img" src="2.jpg" height="800" width="800"/>
+    </div>
 
+
+
+
+    <script>
+        var osmall=document.getElementById('small');
+        var obig=document.getElementById('big');
+        var odrag=document.getElementById('drag');
+        var obigimg=document.getElementById('big-img');
+
+
+        osmall.onmouseover=function () {
+            obig.style.display='block';
+            odrag.style.display='block';
+
+        }
+        osmall.onmousemove=function (e) {
+            //div距图片的宽
+            var odragx=e.clientX-odrag.offsetWidth/2;
+            var odragy=e.clientY-odrag.offsetHeight/2;
+            if(odragx>osmall.offsetWidth-odrag.offsetWidth){
+                odragx=osmall.offsetWidth-odrag.offsetWidth;
+            }else if (odragx<0){
+                odragx=0;
+            }
+
+            if(odragy>osmall.offsetHeight-odrag.offsetHeight){
+                odragy=osmall.offsetHeight-odrag.offsetHeight;
+            }else if (odragy<0){
+                odragy=0;
+            }
+            odrag.style.left=odragx+'px';
+            odrag.style.top=odragy+'px';
+
+            var bilix=odragx / (osmall.offsetWidth-odrag.offsetWidth);
+            var xxx=bilix * (obigimg.offsetWidth-obig.offsetWidth);
+            var biliy=odragy / (osmall.offsetHeight-odrag.offsetHeight);
+            var yyy=biliy * (obigimg.offsetHeight-obig.offsetHeight);
+
+            obigimg.style.left=-xxx+'px';
+            obigimg.style.top=-yyy+'px';
+
+
+        }
+
+        osmall.onmouseout=function () {
+            obig.style.display='none';
+            odrag.style.display='none';
+        }
+
+
+    </script>
 </body>
 </html>

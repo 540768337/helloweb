@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            -webkit-perspective:800px;
+            background-color: black;
+        }
+        #contain{
+
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            animation:run 2s linear infinite ;
+        }
+        @keyframes run {
+            0%{
+
+            }
+            100%{
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+
+
+        #contain div{
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            width: 200px;
+            height: 200px;
+            color: black;
+            background:rgba(255,255,255,0.7);
+            border-radius: 10px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+
+        }
+        #q{
+            -webkit-transform:rotateX(90deg) translateZ(100px);
+
+
+        }
+        #w{
+            -webkit-transform:translateZ(100px);
+        }
+        #e{
+            -webkit-transform:rotateY(90deg) translateZ(100px);
+
+        }
+        #r{
+            -webkit-transform:rotateY(180deg) translateZ(100px);
+
+        }
+        #t{
+            -webkit-transform:rotateY(270deg) translateZ(100px);
+
+        }
+        #y{
+            -webkit-transform:rotateX(270deg) translateZ(100px);
+
+        }
+    </style>
+</head>
+<body>
+<div id="contain">
+    <div id="q">1</div>
+    <div id="w">2</div>
+    <div id="e">3</div>
+    <div id="r">4</div>
+    <div id="t">5</div>
+    <div id="y">6</div>
+</div>
+</body>
+</html>

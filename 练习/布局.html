@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #left{
+            width: 200px;
+            height: 200px;
+            background: #ff6ea5;
+
+        }
+        #right{
+            height: 100px;
+            background: #45ffce;
+            position: relative;
+            left: 200px;
+            top: -200px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="left"></div>
+<div id="right"></div>
+
+<script>
+    var leftDiv = document.getElementById('left');
+    var rightDiv = document.getElementById('right');
+
+    function MakeHeightEqual(){
+        if(leftDiv.clientHeight < rightDiv.clientHeight){
+            leftDiv.style.height = rightDiv.clientHeight+'px';
+        }else{
+            rightDiv.style.height = leftDiv.clientHeight+'px';
+        }
+    }
+    MakeHeightEqual();
+</script>
+</body>
+</html>

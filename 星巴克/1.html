@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1{
+            display: flex;
+            border: 1px solid #000000;
+        }
+        .box2{
+            width:200px;
+            border: 1px solid #333333;
+        }
+        .box3{
+            flex:1;
+            /*overflow: hidden; 如果不加，x轴会出现滚动条，页面混乱*/
+            border: 1px solid #0086B3;
+        }
+        .box4{
+            height:900px;
+            width:100%;
+            min-width: 400px;
+            border: 1px solid #55A532;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+    <div class="box3">
+        <div class="box4">
+            我是一个有最小宽度的盒子
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

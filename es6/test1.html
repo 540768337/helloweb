@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let没有变量提升
+        //let没有重复说明
+        //let有暂时性死区（在当前作用域中不允许同名的变量进来）
+        //块级作用域
+
+
+        // 闭包
+        // 外部函数中有内部函数，内部函数引用外部函数中的变量
+        // 这样变量不释放，就一直保存 这样形成闭包（存了很多个）
+        // 缺点是容易导致内存泄漏
+        console.log(a);
+        var a = 5;
+
+
+        var a=5;
+        var a=6;
+
+        console.log(a); 
+        // var ali=document.querySelectorAll('li');
+        // for(var i=0;i<ali.length;i++){
+        //     ali[i].onclick=function(){
+        //         console.log(i);   //i=4
+
+        //     }
+        // }
+        // for(var i=0;i<ali.length;i++){
+        //     (function (idx) {
+        //         ali[i].onclick=function () {
+        //             console.log(idx);
+        //         }
+        //     })(i)//函数的立即调用
+        // }
+     
+
+
+        //块级作用域  （局部作用域，外边访问不到）
+            for(let i=0;i<4;i++){
+                console.log(i);
+            }
+
+            if (true) {
+                let x='a';
+            }
+
+            console.log(x);
+            console.log(i);
+            
+    </script>
+</body>
+</html>
+//从数组和对象中提取值，对其进行赋值叫做解构
+<!-- 数组解构
+     对象解构
+    字符串解构 
+    应用
+        函数参数的解构赋值
+        函数返回值
+        变量互换
+        json应用
+    其他时候起名字随意，但是解构对象的时候要和名字属性相对应
+
+
+    扩展运算符
+        作为数组一部分 ...arr
+        合并数组  ...arr1...arr2
+        复制数组  [...arr]
+        类数组转化成数组
+    
+    
+        rest运算符：作为最后一个参数。代表将剩余的元素组成一个数组，不能放在中间-->
+    
+
+
+    
+    
